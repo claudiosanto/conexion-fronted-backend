@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
-import "./ContainerProducts.css";
 import ProductList from "../ProductList/ProductList";
+import "./ContainerProducts.css";
+
 function ContainerProducts() {
   const [products, setProducts] = useState([]);
-
   const getProducts = async () => {
-    const response = await fetch("");
-    setProducts(response.data);
+    try {
+      const response = await fetch("https://fakestoreapi.com/products");
+      const data = await response.json();
+      setProducts(data);
+    } catch (error) {
+      console.error(error);
+    }
   };
-
   useEffect(() => {
     getProducts();
   }, []);

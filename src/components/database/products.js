@@ -1,6 +1,7 @@
 export const products = [
   {
-    name: 'lucas'
+    name: 'lucas',
+    imag: ''
   }
 
 ]

@@ -2,6 +2,7 @@ import "./ProductList.css";
 import ProductCard from "../ProducCard/ProductCard";
 
 function ProductList({ products }) {
+  console.log(products);
   return (
     <>
       <div>

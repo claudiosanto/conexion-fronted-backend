@@ -10,7 +10,7 @@ function ContainerProductDetails() {
   const getProductById = async () => {
     try {
       const response = await fetch(
-        `https://fakestoreapi.com/products${productId}`
+        `http://localhost:4030/api/products/${productId}`
       );
       const data = await response.json();
       setProducts(data);

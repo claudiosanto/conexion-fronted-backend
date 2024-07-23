@@ -6,7 +6,7 @@ function UsersContainer() {
   const [users, setUsers] = useState([users]);
   const getAllUsers = async () => {
     try {
-      const response = await fetch("");
+      const response = await fetch("http://localhost:4030/api/users/");
       const data = await response.json();
       setUsers(data);
     } catch (error) {
@@ -18,7 +18,7 @@ function UsersContainer() {
 
     return (
       <div>
-        <UsersList />
+        <UsersList users={users} />
       </div>
     );
   };

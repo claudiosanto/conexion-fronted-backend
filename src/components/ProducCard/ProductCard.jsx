@@ -7,7 +7,7 @@ function ProductCard({ product }) {
       <img src={product.Image} alt="imagen del producto" />
       <h1>nombre{product.title}</h1>
       <p>color{product.price}</p>
-      <p>id key={product.id}</p>
+      <p> key={product.id}</p>
       <Link to={`/products/${product.id}`}>ver detalle</Link>
     </div>
   );

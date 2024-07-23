@@ -1,5 +1,5 @@
 import "./Header.css";
-import icons from "../../icons.png/marca.png";
+
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -9,9 +9,10 @@ function Header() {
         <header className="headercontainer">
           <nav>
             <h1>mercado de compras</h1>
-            <img src={icons} />
-            <Link to="/products">inicio</Link>
+
+            <Link to="/products">producto</Link>
             <Link>categoria</Link>
+            <Link to="/users">usuarios</Link>
           </nav>
         </header>
       </div>

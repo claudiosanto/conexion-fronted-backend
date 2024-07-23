@@ -6,8 +6,8 @@ function ContainerProducts() {
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
     try {
-      const response = await fetch("https://fakestoreapi.com/products");
-
+      const response = await fetch("http://localhost:4030/api/products/");
+      console.log(products);
       const data = await response.json();
       setProducts(data);
     } catch (error) {

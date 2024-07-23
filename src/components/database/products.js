@@ -1,7 +1,25 @@
 export const products = [
   {
-    name: 'lucas',
-    imag: ''
+    nombre: ""
+  },
+  {
+    stock: ""
+  },
+  {
+    lote: ""
+  },
+  {
+    caducidad: ""
+  },
+  {
+    descripcion: ""
+  },
+  {
+    categoria: ""
+
+  },
+  {
+    precio: ""
   }
 
 ]

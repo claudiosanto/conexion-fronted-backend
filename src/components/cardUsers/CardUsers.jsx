@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import "./CardUsers.css";
 
-function CardUsers({ users }) {
+function CardUsers({ user }) {
   return (
     <div>
-      <h1>{users.nombre}</h1>
-      <p>{users.email}</p>
-      <p>{users.id}</p>
-      <p>{users.direccion}</p>
-      <p>{users.fechaRegistro}</p>
-      <p>{users.apellido}</p>
-      <p>{users.edad}</p>
-      <Link to={`/users/${users.id}`}>detalle de usuario</Link>
+      <h1>{user.nombre}</h1>
+      <p>{user.email}</p>
+      <p>{user.id}</p>
+      <p>{user.direccion}</p>
+      <p>{user.fechaRegistro}</p>
+      <p>{user.apellido}</p>
+      <p>{user.edad}</p>
+      <Link to={`/users/${user.id}`}>detalle de usuario</Link>
     </div>
   );
 }

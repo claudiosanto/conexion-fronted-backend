@@ -9,6 +9,7 @@ function ContainerProducts() {
       const response = await fetch("http://localhost:4030/api/products/");
       console.log(products);
       const data = await response.json();
+      console.log(data);
       setProducts(data);
     } catch (error) {
       console.error(error);
@@ -18,6 +19,6 @@ function ContainerProducts() {
     getProducts();
   }, []);
 
-  return <ProductList products={products} />;
+  return <ProductList products={products || []} />;
 }
 export default ContainerProducts;

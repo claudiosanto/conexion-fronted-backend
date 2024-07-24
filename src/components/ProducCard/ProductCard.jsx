@@ -5,9 +5,13 @@ function ProductCard({ product }) {
   return (
     <div>
       <img src={product.Image} alt="imagen del producto" />
-      <h1>nombre{product.title}</h1>
-      <p>color{product.price}</p>
+      <h1>nombre{product.nombre}</h1>
+      <p>color{product.precio}</p>
       <p> key={product.id}</p>
+      <p>{product.stock}</p>
+      <p>{product.caducidad}</p>
+      <p>{product.lote}</p>
+      <p>{product.descripcion}</p>
       <Link to={`/products/${product.id}`}>ver detalle</Link>
     </div>
   );

@@ -7,10 +7,9 @@ function ContainerProducts() {
   const getProducts = async () => {
     try {
       const response = await fetch("http://localhost:4030/api/products/");
-      console.log(products);
       const data = await response.json();
-      console.log(data);
-      setProducts(data);
+      console.log(data.payload);
+      setProducts(data.payload);
     } catch (error) {
       console.error(error);
     }

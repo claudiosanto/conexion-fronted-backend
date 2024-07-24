@@ -11,7 +11,7 @@ function CardUsers({ users }) {
       <p>{users.fechaRegistro}</p>
       <p>{users.apellido}</p>
       <p>{users.edad}</p>
-      <Link to={"/api/users"}>detalle de usuario</Link>
+      <Link to={`/users/${users.id}`}>detalle de usuario</Link>
     </div>
   );
 }

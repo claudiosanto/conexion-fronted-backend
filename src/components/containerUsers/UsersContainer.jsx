@@ -3,12 +3,13 @@ import "./UsersContainer.css";
 import UsersList from "../userslist/UsersList";
 
 function UsersContainer() {
-  const [users, setUsers] = useState([users]);
+  const [users, setUsers] = useState([]);
   const getAllUsers = async () => {
     try {
       const response = await fetch("http://localhost:4030/api/users/");
       const data = await response.json();
-      setUsers(data);
+      console.log(data);
+      setUsers(data.payload);
     } catch (error) {
       console.error(err);
     }

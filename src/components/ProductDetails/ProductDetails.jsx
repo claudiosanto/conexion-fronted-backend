@@ -1,3 +1,4 @@
+import ProductCard from "../ProducCard/ProductCard";
 import "./ProductDetails.css";
 
 function ProductDetails(product) {
@@ -12,6 +13,7 @@ function ProductDetails(product) {
       <p>{product.descripcion}</p>
       <p>{product.categoria}</p>
       <p>{product.precio}</p>
+      <ProductCard product={product} />
     </div>
   );
 }

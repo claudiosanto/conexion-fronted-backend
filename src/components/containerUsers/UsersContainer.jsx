@@ -6,9 +6,9 @@ function UsersContainer() {
   const [users, setUsers] = useState([]);
   const getAllUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:4030/api/users/");
+      const response = await fetch("http://localhost:4030/api/users/");
       const data = await response.json();
-
+      console.log(response.data);
       setUsers(data.payload);
     } catch (error) {
       console.error(err);

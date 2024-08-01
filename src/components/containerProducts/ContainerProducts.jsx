@@ -18,6 +18,6 @@ function ContainerProducts() {
     getProducts();
   }, []);
 
-  return <ProductList products={products || []} />;
+  return <ProductList products={products} />;
 }
 export default ContainerProducts;

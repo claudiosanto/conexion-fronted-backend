@@ -6,15 +6,13 @@ import ProductDetails from "../ProductDetails/ProductDetails";
 function ContainerProductDetails() {
   const [product, setProducts] = useState(null);
 
-  const { productId } = useParams();
+  const { Pid } = useParams();
 
   const getProductById = async () => {
     try {
-      const response = await fetch(
-        `http://localhost:4030/api/products/${productId}`
-      );
+      const response = await fetch(`http://localhost:4030/api/products/${Pid}`);
       const data = await response.json();
-      console.log(data.payload);
+
       setProducts(data.payload);
     } catch (error) {
       console.error(error);
@@ -23,7 +21,7 @@ function ContainerProductDetails() {
 
   useEffect(() => {
     getProductById();
-  }, [productId]);
+  }, []);
   return (
     <div>
       {product == null ? (

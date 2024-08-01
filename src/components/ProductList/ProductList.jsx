@@ -7,8 +7,8 @@ function ProductList({ products }) {
       {!products || products.length === 0 ? (
         <div>loader....</div>
       ) : (
-        products.map((product) => {
-          <ProductCard key={product.id} product={product} />;
+        products.map((products) => {
+          <ProductCard key={products.id} product={products} />;
         })
       )}
     </div>

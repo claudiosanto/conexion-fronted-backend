@@ -6,7 +6,7 @@ function ListUsers({ users }) {
       {!users || users.lenght === 0 ? (
         <h1>cargando.....</h1>
       ) : (
-        users.map((users) => <CardUsers key={users.id} user={users} />)
+        users.map((users, id) => <CardUsers user={users} key={id} />)
       )}
     </div>
   );

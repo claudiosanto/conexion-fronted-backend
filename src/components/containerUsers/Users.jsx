@@ -17,7 +17,7 @@ function Users() {
     getUsers();
   }, []);
 
-  return <ListUsers users={users} />;
+  return <ListUsers users={users} key={users} />;
 }
 
 export default Users;

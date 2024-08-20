@@ -1,31 +1,36 @@
-import { GetProductBynombre } from "./components/database/users";
-import "./Header.css";
-
+import { getProductBynombre } from "./components/database/users";
 import { Link } from "react-router-dom";
-
+import "./Header.css";
+import logo from "../src/assets/img/logo.svg";
 function Header() {
   const hendleSubmit = (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target));
-    GetProductBynombre(data.nombre).then((data) => console.log(data));
+    getProductBynombre(data.nombre).then((data) => console.log(data));
   };
   return (
-    <>
-      <div>
-        <header className="headercontainer">
-          <nav>
-            <h1>mercado de compras</h1>
-            <Link to="/products">producto</Link>
-            <Link to="/users">usuarios</Link>
-
-            <form onSubmit={hendleSubmit}>
-              <input type="nombre" name="nombre" />
-              <input type="submit" value={"enviar"} />
-            </form>
-          </nav>
-        </header>
-      </div>
-    </>
+    <main className="main">
+      <header className="header-container">
+        <div className="titulo">
+          <img className="logo" src={logo} />
+          <h1>mercado de compras</h1>
+        </div>
+        <form onSubmit={hendleSubmit}>
+          <input type="text" name="nombre" />
+          <input type="submit" value={"enviar"} />
+        </form>
+        <div className="navegacion">
+          <ul>
+            <li>
+              <Link to="/products">productos</Link>
+            </li>
+            <li>
+              <Link to="/users">usuarios</Link>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </main>
   );
 }
 export default Header;

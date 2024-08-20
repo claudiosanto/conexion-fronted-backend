@@ -25,13 +25,13 @@ const users = [
 ];
 export default users
 
-export async function GetProductBynombre(nombre) {
+export async function getProductBynombre(nombre) {
   const query = `/nombre/?nombre=${nombre}`
 
   try {
     const response = await fetch("http://localhost:4030/api/products/".concat(query));
     const data = await response.json();
-    console.log(data.payload);
+    console.log(data);
     return data
   } catch (error) {
     console.error(error);

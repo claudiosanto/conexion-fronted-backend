@@ -3,12 +3,12 @@ import ProductCard from "../ProducCard/ProductCard";
 
 function ProductList({ products }) {
   return (
-    <div>
+    <div id="list">
       {!products || products.length === 0 ? (
         <div>loader....</div>
       ) : (
-        products.map((products) => {
-          <ProductCard key={products.id} product={products} />;
+        products.map((product) => {
+          <ProductCard key={product.id} product={products} />;
         })
       )}
     </div>

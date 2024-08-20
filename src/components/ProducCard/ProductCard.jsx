@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
+  console.log(product);
   return (
     <div>
       <img src={product.Image} alt="imagen del producto" />
@@ -12,7 +13,7 @@ function ProductCard({ product }) {
       <p>{product.caducidad}</p>
       <p>{product.lote}</p>
       <p>{product.descripcion}</p>
-      <Link to={`/products/nombre${product.nombre}`}>ver detalle</Link>
+      <Link to={`/products/nombre/?nombre=${product.nombre}`}>ver detalle</Link>
     </div>
   );
 }

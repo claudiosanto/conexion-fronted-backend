@@ -1,7 +1,7 @@
 import ProductCard from "../ProducCard/ProductCard";
 import "./ProductDetails.css";
 
-function ProductDetails(product) {
+function ProductDetails({ product }) {
   return (
     <div>
       <img src="imag" />

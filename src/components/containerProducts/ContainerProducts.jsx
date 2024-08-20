@@ -1,19 +1,11 @@
 import { useEffect, useState } from "react";
 import ProductList from "../ProductList/ProductList";
 import "./ContainerProducts.css";
+import { useProductsContext } from "../../context/ProductContext";
 
 function ContainerProducts() {
-  const [products, setProducts] = useState([]);
-  const getProducts = async () => {
-    try {
-      const response = await fetch("http://localhost:4030/api/products/");
-      const data = await response.json();
-      console.log(data.payload);
-      setProducts(data.payload);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const { products, getProducts } = useProductsContext;
+
   useEffect(() => {
     getProducts();
   }, []);

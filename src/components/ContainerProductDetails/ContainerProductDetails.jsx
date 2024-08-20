@@ -14,10 +14,12 @@ function ContainerProductDetails() {
   const nombre = queryParams.get("nombre");
 
   //creamos una funcion porque getProductById es async y para ejecutarlo en el useEffect es de otra forma
-  const getById = async () => {
+  const getProdById = async () => {
     setProducts(await getProductById(nombre));
   };
-  useEffect(() => {}, []);
+  useEffect(() => {
+    getProdById();
+  }, []);
   return (
     <div>
       {product == null ? (

@@ -32,7 +32,7 @@ function ProductsProvider({ children }) {
   };
 
   return (
-    <ProductsContext.Provider value={{ products, getProducts, getProductById }}>
+    <ProductsContext.Provider value={{ products, getProductById, getProducts }}>
       {children}
     </ProductsContext.Provider>
   );

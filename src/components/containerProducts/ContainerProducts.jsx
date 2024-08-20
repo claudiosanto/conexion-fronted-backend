@@ -4,7 +4,7 @@ import "./ContainerProducts.css";
 import { useProductsContext } from "../../context/ProductContext";
 
 function ContainerProducts() {
-  const { products, getProducts } = useProductsContext;
+  const { products, getProducts } = useProductsContext();
 
   useEffect(() => {
     getProducts();

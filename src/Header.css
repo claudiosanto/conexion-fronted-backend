@@ -1,19 +1,19 @@
 *{margin: 0px;
   padding: 0px;
-  background-color: rgba(0, 123, 255, 0.5);
+  background-color:grey;
 }
 
 
 .header-container {
   display: flex;
-padding: auto;
+
 margin:auto;
 width:auto;
 flex-wrap: wrap;
   text-align: center;
 gap: 65px;
   position: relative;
-  top: -270px;
+ 
 
 }
 .titulo

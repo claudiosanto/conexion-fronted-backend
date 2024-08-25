@@ -1,7 +1,7 @@
 import { getProductBynombre } from "./components/database/users";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import logo from "../src/assets/img/logo.svg";
+import logo from "../src/logo/logo.svg";
 function Header() {
   const hendleSubmit = (e) => {
     e.preventDefault();
@@ -29,8 +29,18 @@ function Header() {
             </li>
           </ul>
         </div>
+        <a
+          href="http://localhost:4030/dashboard"
+          style={{
+            color: "black",
+            fontSize: "20px",
+          }}
+        >
+          Dashboard
+        </a>
       </header>
     </main>
   );
 }
+
 export default Header;

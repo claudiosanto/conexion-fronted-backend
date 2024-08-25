@@ -4,11 +4,10 @@ import "./ProductCard.css";
 function ProductCard({ product }) {
   console.log(product);
   return (
-    <div>
-      <img src={product.Image} alt="imagen del producto" />
-      <h1>nombre{product.nombre}</h1>
-      <p>color{product.precio}</p>
-
+    <div className="caracteristicas">
+      <img src={product.image} alt={`imagen de ${product.nombre}`} />
+      <h1>{product.nombre}</h1>
+      <p>{product.precio}</p>
       <p>{product.stock}</p>
       <p>{product.caducidad}</p>
       <p>{product.lote}</p>

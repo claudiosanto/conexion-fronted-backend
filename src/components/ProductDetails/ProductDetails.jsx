@@ -4,7 +4,7 @@ import "./ProductDetails.css";
 function ProductDetails({ product }) {
   return (
     <div>
-      <img src="imag" />
+      <img src={product.image} alt={product.nombre} />
       <p>{product.nombre}</p>
       <p>{product.stock}</p>
       <p>{product.lote}</p>

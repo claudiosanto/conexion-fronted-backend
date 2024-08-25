@@ -18,21 +18,23 @@ function ProductsProvider({ children }) {
     }
   };
 
-  const getProductById = async (nombre) => {
+  const getProductByNombre = async (nombre) => {
     try {
       const response = await fetch(
         `http://localhost:4030/api/products/nombre/?nombre=${nombre}`
       );
       const data = await response.json();
-      console.log(data.payload);
+      console.log(data);
       return response.data;
     } catch (error) {
-      console.error(error);
+      console.error("Error al obtener el producto:", error);
     }
   };
 
   return (
-    <ProductsContext.Provider value={{ products, getProductById, getProducts }}>
+    <ProductsContext.Provider
+      value={{ products, getProductByNombre, getProducts }}
+    >
       {children}
     </ProductsContext.Provider>
   );

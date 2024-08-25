@@ -6,19 +6,25 @@ import { useLocation } from "react-router-dom";
 import { useProductsContext } from "../../context/ProductContext";
 
 function ContainerProductDetails() {
-  const { getProductById } = useProductsContext;
+  const { getProductByNombre } = useProductsContext();
   const [product, setProducts] = useState(null);
 
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const nombre = queryParams.get("nombre");
 
-  //creamos una funcion porque getProductById es async y para ejecutarlo en el useEffect es de otra forma
-  const getProdById = async () => {
-    setProducts(await getProductById(nombre));
+  const setProductById = async () => {
+    console.log("Nombre buscado:", nombre);
+    try {
+      const ProductId = await getProductByNombre(nombre);
+      setProducts(ProductId);
+      console.log("producto obtenido", ProductId);
+    } catch (error) {
+      console.log("no carga", error);
+    }
   };
   useEffect(() => {
-    getProdById();
+    setProductById();
   }, []);
   return (
     <div>

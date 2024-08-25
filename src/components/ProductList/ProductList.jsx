@@ -1,16 +1,19 @@
 import "./ProductList.css";
+import { useEffect } from "react";
+import { useProductsContext } from "../../context/ProductContext";
 import ProductCard from "../ProducCard/ProductCard";
 
-function ProductList({ products }) {
+function ProductList() {
+  const { products, getProducts } = useProductsContext();
+
+  useEffect(() => {
+    getProducts();
+  }, []);
   return (
-    <div id="list">
-      {!products || products.length === 0 ? (
-        <div>loader....</div>
-      ) : (
-        products.map((product) => {
-          <ProductCard key={product.id} product={products} />;
-        })
-      )}
+    <div id="id">
+      {products.map((product) => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   );
 }

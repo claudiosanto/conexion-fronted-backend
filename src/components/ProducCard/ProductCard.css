@@ -1,0 +1,10 @@
+.caracteristicas{
+  margin: 20px;
+  font-size: 14px;
+  gap: 30px;
+  display: flex;
+flex-direction: column;
+}
+.caracteristicas>img{
+margin: 50px;
+}

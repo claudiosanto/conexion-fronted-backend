@@ -25,7 +25,7 @@ function ProductsProvider({ children }) {
       );
       const data = await response.json();
       console.log(data);
-      return response.data;
+      return data;
     } catch (error) {
       console.error("Error al obtener el producto:", error);
     }

@@ -5,7 +5,7 @@ function ProductCard({ product }) {
   console.log(product);
   return (
     <div className="caracteristicas">
-      <img src={product.image} alt={`imagen de ${product.nombre}`} />
+      <img src={product.image} alt={product.nombre} />
       <h1>{product.nombre}</h1>
       <p>{product.precio}</p>
       <p>{product.stock}</p>

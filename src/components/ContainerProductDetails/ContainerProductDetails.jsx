@@ -12,9 +12,11 @@ function ContainerProductDetails() {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const nombre = queryParams.get("nombre");
+  console.log(nombre);
   const setProductById = async () => {
     try {
       const Product = await getProductByNombre(nombre);
+      console.log(Product);
       setProducts(Product);
       console.log("producto obtenido");
     } catch (error) {

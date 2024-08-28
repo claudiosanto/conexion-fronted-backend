@@ -21,7 +21,7 @@ const product = [
     descripción: "Jabón de manos líquido con aroma a lavanda.",
     categoría: "Higiene Personal",
     precio: "2.00",
-    img: '/assets/fotos de productos/jabon de Manos.jpg'
+    Image: '/assets/fotos de productos/jabon de Manos.jpg'
   },
 
 
@@ -75,8 +75,19 @@ const product = [
     descripción: "Cereales de maíz sin azúcares añadidos.",
     categoría: "Alimentos",
     precio: "3.00",
-    img: '/assets/fotos de productos/Cereales de Maíz.jpg'
+    img: "/assets/fotos de productos/Cereales de Maíz.jpg"
   },
+  {
+    "nombre": "Mermelada de Durazno",
+    "stock": "34",
+    "lote": "4044-4040",
+    "caducidad": "12/04/2024",
+    "descripcion": "Mermelada de Durazno",
+    "categoria": "dulces",
+    "precio": "23000",
+    img: ""
+  }
+
 
 ]
 export default product;

@@ -9,7 +9,7 @@ const product = [
     descripción: "Pasta integral rica en fibra.",
     categoría: " Alimentos",
     precio: "2.30",
-    img: '/assets/fotos de productos/Pasta Integral.jpg'
+
   },
 
 
@@ -21,7 +21,7 @@ const product = [
     descripción: "Jabón de manos líquido con aroma a lavanda.",
     categoría: "Higiene Personal",
     precio: "2.00",
-    Image: '/assets/fotos de productos/jabon de Manos.jpg'
+
   },
 
 
@@ -32,7 +32,7 @@ const product = [
     descripción: "Leche descremada de 1 litro.",
     categoría: "Lácteos",
     precio: "1.00",
-    img: '/assets/fotos de productos/Leche Descremada.jpg'
+
   },
 
   {
@@ -42,7 +42,7 @@ const product = [
     descripción: "Champú especial para combatir la caspa.",
     categoría: "Higiene Personal",
     precio: "5.50",
-    img: '/assets/fotos de productos/Champú Anticaspa.jpg'
+
   },
 
 
@@ -54,7 +54,7 @@ const product = [
     descripción: "Arroz integral rico en nutrientes.",
     categoría: "Alimentos",
     precio: "1.60",
-    img: '/assets/fotos de productos/Arroz Integral.jpg'
+
   },
 
 
@@ -65,7 +65,7 @@ const product = [
     descripción: "Crema hidratante para piel seca.",
     categoría: "Higiene Personal",
     precio: "6.80",
-    img: '/assets/fotos de productos/Crema Hidratante.jpg'
+
   },
 
   {
@@ -75,7 +75,7 @@ const product = [
     descripción: "Cereales de maíz sin azúcares añadidos.",
     categoría: "Alimentos",
     precio: "3.00",
-    img: "/assets/fotos de productos/Cereales de Maíz.jpg"
+
   },
   {
     "nombre": "Mermelada de Durazno",
@@ -85,7 +85,7 @@ const product = [
     "descripcion": "Mermelada de Durazno",
     "categoria": "dulces",
     "precio": "23000",
-    img: ""
+
   }
 
 

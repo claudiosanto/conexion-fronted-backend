@@ -23,6 +23,7 @@ function ProductsProvider({ children }) {
       const response = await fetch(
         `http://localhost:4030/api/products/nombre/?nombre=${nombre}`
       );
+      console.log(nombre);
       const data = await response.json();
       console.log(data);
       return data;

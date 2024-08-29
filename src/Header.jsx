@@ -30,6 +30,7 @@ function Header() {
           </ul>
         </div>
         <a
+          className="dashboard"
           href="http://localhost:4030/dashboard"
           style={{
             color: "black",

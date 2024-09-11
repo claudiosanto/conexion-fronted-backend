@@ -13,9 +13,10 @@ function App() {
         <Header />
         <Routes>
           <Route
-            path="/products/nombre"
+            path="/products/:nombre"
             element={<ContainerProductDetails />}
           />
+
           <Route path="/products" element={<ContainerProducts />} />
           <Route path="/users" element={<Users />} />
         </Routes>

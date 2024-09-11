@@ -2,34 +2,31 @@ import { useEffect, useState } from "react";
 import "./ContainerProductDetails.css";
 
 import ProductDetails from "../ProductDetails/ProductDetails";
-import { useLocation, useParams } from "react-router-dom";
+
 import { useProductsContext } from "../../context/ProductContext";
+import { useParams } from "react-router-dom";
 
 function ContainerProductDetails() {
   const { getProductByNombre } = useProductsContext();
   const [product, setProducts] = useState(null);
+  const { nombre } = useParams();
 
-  const location = useLocation();
-  const queryParams = new URLSearchParams(location.search);
-  const nombre = queryParams.get("nombre");
-  console.log(nombre);
   const setProductById = async () => {
     try {
-      const Product = await getProductByNombre(nombre);
-      console.log(Product);
-      setProducts(Product);
-      console.log("producto obtenido");
+      const product = await getProductByNombre(nombre);
+      console.log(product);
+      setProducts(product);
     } catch (error) {
       console.log("no carga", error);
     }
   };
   useEffect(() => {
     setProductById();
-  }, []);
+  }, [nombre]);
   return (
     <div>
       {!product ? (
-        <div>loader...</div>
+        <div>cargando...</div>
       ) : (
         <ProductDetails key={product.nombre} product={product} />
       )}

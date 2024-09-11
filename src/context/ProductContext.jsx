@@ -11,21 +11,28 @@ function ProductsProvider({ children }) {
     try {
       const response = await fetch("http://localhost:4030/api/products/");
       const data = await response.json();
-      console.log(data.payload);
       setProducts(data.payload);
+      console.log(data.payload);
     } catch (error) {
       console.error(error);
     }
   };
 
   const getProductByNombre = async (nombre) => {
+    if (!nombre) {
+      console.error("El nombre del producto no está definido o es vacío");
+      return null;
+    }
     try {
-      const response = await fetch(
-        `http://localhost:4030/api/products/nombre/?nombre=${nombre}`
+      const URL = `http://localhost:4030/api/products/nombre/?nombre=${nombre}`;
+      console.log(
+        `http://localhost:4030/api/products/nombre/?nombre=${nombre}`,
+        URL
       );
-      console.log(nombre);
+      const response = await fetch(URL);
+
       const data = await response.json();
-      console.log(data);
+
       return data;
     } catch (error) {
       console.error("Error al obtener el producto:", error);

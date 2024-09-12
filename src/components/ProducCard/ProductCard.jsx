@@ -12,7 +12,7 @@ function ProductCard({ product }) {
       <p>{product.caducidad}</p>
       <p>{product.lote}</p>
       <p>{product.descripcion}</p>
-      <p>id: {product.id}</p>
+      <p>id: {product._id}</p>
 
       <Link to={`/products/nombre/?nombre=${product.nombre}`}>ver detalle</Link>
     </div>

@@ -1,4 +1,4 @@
-/*import { useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 export async function getProductByNombre(nombre) {
   const query = `/nombre/?nombre=${nombre}`;
@@ -17,4 +17,4 @@ export async function getProductByNombre(nombre) {
   } catch (error) {
     console.error(error);
   }
-}*/
+}

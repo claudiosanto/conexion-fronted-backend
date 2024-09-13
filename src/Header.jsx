@@ -6,7 +6,7 @@ function Header() {
   const hendleSubmit = (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.target));
-    getProductBynombre(data.nombre).then((data) => console.log(data));
+    getProductBynombre(data._id).then((data) => console.log(data));
   };
   return (
     <main className="main">

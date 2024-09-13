@@ -12,10 +12,7 @@ function App() {
       <ProductsProvider>
         <Header />
         <Routes>
-          <Route
-            path="/products/:nombre"
-            element={<ContainerProductDetails />}
-          />
+          <Route path="/products/:id" element={<ContainerProductDetails />} />
 
           <Route path="/products" element={<ContainerProducts />} />
           <Route path="/users" element={<Users />} />

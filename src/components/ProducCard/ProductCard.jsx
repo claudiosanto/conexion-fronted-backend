@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 function ProductCard({ product }) {
-  console.log(product);
   return (
     <div className="caracteristicas">
       <img src={product.image} alt={product.nombre} />
@@ -14,7 +13,7 @@ function ProductCard({ product }) {
       <p>{product.descripcion}</p>
       <p>id: {product._id}</p>
 
-      <Link to={`/products/nombre/?nombre=${product.nombre}`}>ver detalle</Link>
+      <Link to={`/products/id/?id=${product._id}`}>ver detalle</Link>
     </div>
   );
 }

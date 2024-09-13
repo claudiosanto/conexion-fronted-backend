@@ -9,11 +9,11 @@ import { useParams } from "react-router-dom";
 function ContainerProductDetails() {
   const { getProductByNombre } = useProductsContext();
   const [product, setProducts] = useState(null);
-  const { id } = useParams();
+  const { _id } = useParams();
 
   const setProductById = async () => {
     try {
-      const product = await getProductByNombre(id);
+      const product = await getProductByNombre(_id);
       console.log(product);
       setProducts(product);
     } catch (error) {
@@ -22,7 +22,7 @@ function ContainerProductDetails() {
   };
   useEffect(() => {
     setProductById();
-  }, [id]);
+  }, [_id]);
   return (
     <div>
       {!product ? (

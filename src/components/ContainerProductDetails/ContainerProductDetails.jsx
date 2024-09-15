@@ -13,9 +13,13 @@ function ContainerProductDetails() {
 
   const setProductById = async () => {
     try {
-      const product = await getProductById(_id);
-      console.log(product);
-      setProducts(product);
+      const response = await getProductById(_id);
+      console.log(response);
+      if (response && response.payload) {
+        setProducts(response.payload);
+      } else {
+        console.log("No se encontró el producto o el payload es inválido");
+      }
     } catch (error) {
       console.log("no carga", error);
     }

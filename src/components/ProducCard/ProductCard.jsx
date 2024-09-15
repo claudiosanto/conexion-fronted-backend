@@ -13,7 +13,7 @@ function ProductCard({ product }) {
       <p>{product.descripcion}</p>
       <p>id: {product._id}</p>
 
-      <Link to={`/products/id/?id=${product._id}`}>ver detalle</Link>
+      <Link to={`/products/ID=${product._id}`}>ver detalle</Link>
     </div>
   );
 }

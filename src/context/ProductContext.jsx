@@ -11,8 +11,8 @@ function ProductsProvider({ children }) {
     try {
       const response = await fetch("http://localhost:4030/api/products/");
       const data = await response.json();
-      setProducts(data.payload);
       console.log(data.payload);
+      setProducts(data.payload);
     } catch (error) {
       console.error(error);
     }
@@ -24,8 +24,8 @@ function ProductsProvider({ children }) {
       return null;
     }
     try {
-      const URL = `http://localhost:4030/api/products/id/?id=${_id}`;
-      console.log(`http://localhost:4030/api/products/id/?id=${_id}`, URL);
+      const URL = `http://localhost:4030/api/products/ID=${_id}`;
+      console.log(`http://localhost:4030/api/products/ID=${_id}`, URL);
       const response = await fetch(URL);
 
       const data = await response.json();

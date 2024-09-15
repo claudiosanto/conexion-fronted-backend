@@ -7,7 +7,7 @@ import { useProductsContext } from "../../context/ProductContext";
 import { useParams } from "react-router-dom";
 
 function ContainerProductDetails() {
-  const { getProductByNombre } = useProductsContext();
+  const { getProductById } = useProductsContext();
   const [product, setProducts] = useState(null);
   const { _id } = useParams();
 

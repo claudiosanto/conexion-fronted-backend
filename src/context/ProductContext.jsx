@@ -18,14 +18,14 @@ function ProductsProvider({ children }) {
     }
   };
 
-  const getProductByNombre = async (id) => {
-    if (!id) {
+  const getProductById = async (_id) => {
+    if (!_id) {
       console.error("El nombre del producto no está definido o es vacío");
       return null;
     }
     try {
-      const URL = `http://localhost:4030/api/products/id/?id=${id}`;
-      console.log(`http://localhost:4030/api/products/id/?id=${id}`, URL);
+      const URL = `http://localhost:4030/api/products/id/?id=${_id}`;
+      console.log(`http://localhost:4030/api/products/id/?id=${_id}`, URL);
       const response = await fetch(URL);
 
       const data = await response.json();
